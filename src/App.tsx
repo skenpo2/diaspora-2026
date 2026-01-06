@@ -258,7 +258,7 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: 'The Vision', href: '#about', isExternal: false },
+    { label: 'The Mission', href: '#about', isExternal: false },
     { label: 'Speakers', href: '#speakers', isExternal: false },
     {
       label: 'Itinerary',
@@ -1109,7 +1109,7 @@ const Footer: React.FC = () => {
           <ul className="space-y-4 font-['Cormorant_Garamond'] text-lg text-slate-300">
             <li>
               <a href="#about" className="hover:text-white transition-colors">
-                The Vision
+                The Mission
               </a>
             </li>
             <li>
@@ -1122,10 +1122,10 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <a
-                href="#packages"
+                href="https://www.thediasporasalon.com/itinerary"
                 className="hover:text-white transition-colors"
               >
-                The Journey
+                The Itinerary
               </a>
             </li>
           </ul>
