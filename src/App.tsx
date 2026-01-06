@@ -44,7 +44,7 @@ const NoiseOverlay = () => (
   />
 );
 
-const Navigation: React.FC<{ activeSection: string }> = ({ activeSection }) => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -579,8 +579,6 @@ const Footer: React.FC = () => {
 
 // --- MAIN APP ---
 const App: React.FC = () => {
-  const [activeSection, setActiveSection] = useState('');
-
   // Add font injection for the demo
   useEffect(() => {
     const link = document.createElement('link');
@@ -593,7 +591,7 @@ const App: React.FC = () => {
   return (
     <div className="bg-[#FDFBF7] min-h-screen selection:bg-[#C05621] selection:text-white">
       <NoiseOverlay />
-      <Navigation activeSection={activeSection} />
+      <Navigation />
       <Hero />
       <About />
       <VisualBreak />
