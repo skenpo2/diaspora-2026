@@ -938,7 +938,7 @@ const Itinerary: React.FC = () => {
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-['Cormorant_Garamond'] text-4xl text-[#FDFBF7]">
-            Sample Itinerary
+            Itinerary
           </h2>
           <p className="text-[#C05621] font-['Proza_Libre'] tracking-widest text-sm mt-2">
             FEB 7–12, 2026
