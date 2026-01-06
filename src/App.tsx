@@ -1162,7 +1162,6 @@ const App: React.FC = () => {
       <NoiseOverlay />
       <Navigation />
       <Hero />
-      {/* <Partners /> */}
       <About />
       <Experience />
       <Speakers />
