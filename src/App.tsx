@@ -9,7 +9,6 @@ import {
   MoveRight,
   Instagram,
   Linkedin,
-  Facebook,
   Users,
   MessageCircle,
 } from 'lucide-react';
@@ -36,20 +35,6 @@ interface FormData {
 }
 
 // --- COMPONENTS ---
-
-// Custom X (Twitter) Logo Component
-const XLogo = ({ size = 20, className = '' }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className={className}
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
-  </svg>
-);
 
 const NoiseOverlay = () => (
   <div
@@ -414,16 +399,18 @@ const Hero: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="font-['Cormorant_Garamond'] text-6xl md:text-8xl lg:text-9xl text-[#FDFBF7] leading-[0.9] mb-8 font-light">
+          <h1 className="font-['Cormorant_Garamond'] text-6xl md:text-8xl lg:text-9xl text-white leading-[0.9] mb-8 font-extrabold">
             The Diaspora Salon
             <br />
-            <span className="italic">Marrakech 2026</span>
+            <span className="italic font-light text-[#e3d9c6] text-4xl md:text-6xl">
+              Marrakech 2026
+            </span>
           </h1>
 
-          <p className="font-['Proza_Libre'] text-lg md:text-xl text-[#FDFBF7]/80 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+          <p className="font-['Proza_Libre'] text-lg md:text-2xl text-white  max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
             A four-day cultural and intellectual gathering of Black diaspora
-            writers, thinkers, and cultural leaders—set in the magic of
-            Marrakech.
+            writers, thinkers, entrepreneurs, and cultural leaders—set in the
+            magic of Marrakech.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-[#FDFBF7] mb-16 font-['Proza_Libre'] text-sm tracking-widest">
@@ -433,7 +420,7 @@ const Hero: React.FC = () => {
                 size={18}
                 strokeWidth={1.5}
               />
-              <span>FEB 8–11, 2026</span>
+              <span>FEB 7–12, 2026</span>
             </div>
             <div className="w-px h-4 bg-white/20 hidden md:block"></div>
             <div className="flex items-center gap-3">
@@ -512,9 +499,10 @@ const About: React.FC = () => {
             </h2>
             <p className="font-['Proza_Libre'] text-lg leading-relaxed mb-6 text-slate-600">
               The Diaspora Salon is an intimate convening that brings together
-              writers, artists, academics, founders, diplomats, and cultural
-              leaders across the Black diaspora for conversation, performance,
-              and connection—anchored in ideas, craft, and community.
+              writers, artists, academics, founders, diplomats, entrepreneurs,
+              tech champions, and cultural leaders across the Black diaspora for
+              conversation, performance, and connection anchored in ideas,
+              craft, and community.
             </p>
             <p className="font-['Proza_Libre'] text-lg leading-relaxed mb-10 text-slate-600">
               Expect salons, panels, private dinners, curated cultural moments,
@@ -524,8 +512,8 @@ const About: React.FC = () => {
 
             <div className="border-l-4 border-[#C05621] pl-6 py-2 mb-8 bg-[#EADDCD]/20">
               <p className="font-['Cormorant_Garamond'] text-2xl italic text-[#1A365D]">
-                "Marrakech is a meeting point—history, art, and global passage
-                in one city."
+                "Marrakech is a timeless crossroads where cultures have met,
+                mingled, and flourished."
               </p>
             </div>
           </div>
@@ -570,9 +558,9 @@ const Experience: React.FC = () => {
             The Marrakech Experience
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl font-['Proza_Libre'] leading-relaxed">
-            Think sun-washed courtyards, intimate salons, late-night music, and
-            conversations you carry home. The Diaspora Salon is not a
-            conference—it's an atmosphere.
+            The Diaspora Salon is not a conference —it is a living laboratory of
+            ideas and connections, shared in beautiful gardens and over
+            glamorous dinners.
           </p>
         </div>
 
@@ -724,39 +712,6 @@ const Speakers: React.FC = () => {
   );
 };
 
-const Partners: React.FC = () => {
-  return (
-    <section className="py-20 bg-[#FDFBF7] border-b border-[#EADDCD]">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <span className="text-slate-400 uppercase tracking-[0.2em] text-xs font-bold block mb-12">
-          In Partnership With
-        </span>
-        <p className="font-['Proza_Libre'] text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-          The Diaspora Salon is supported by a curated ecosystem of cultural
-          institutions and academic collaborators.
-          <strong className="text-[#1A365D]"> VOYA</strong> serves as the
-          official travel, logistics, and hospitality partner.
-        </p>
-        <div className="flex flex-wrap justify-center gap-12 md:gap-20 opacity-40 grayscale">
-          {/* Placeholder for Logos - using text for now */}
-          <div className="text-2xl font-serif font-bold text-slate-800">
-            VOYA
-          </div>
-          <div className="text-2xl font-serif font-bold text-slate-800">
-            THE AFRICA CENTER
-          </div>
-          <div className="text-2xl font-serif font-bold text-slate-800">
-            NYU AFRICA HOUSE
-          </div>
-          <div className="text-2xl font-serif font-bold text-slate-800">
-            CONDÉ NAST
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const Packages: React.FC = () => {
   const [showBooking, setShowBooking] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState('standard');
@@ -842,44 +797,48 @@ const Packages: React.FC = () => {
                 {/* Sub-Card 1 */}
                 <div className="mb-6 p-4 border border-[#EADDCD] bg-slate-50/50">
                   <div className="flex justify-between items-baseline mb-2">
-                    <h4 className="font-bold text-slate-800">Salon Pass</h4>
+                    <h4 className="font-bold text-slate-800">Salon Standard</h4>
                     <span className="font-['Cormorant_Garamond'] text-xl">
                       $2,495
                     </span>
                   </div>
                   <p className="text-xs text-slate-500 mb-3">
-                    Full programming access + Welcome Reception
+                    Full programming access + Accommodation
                   </p>
-                  <button
-                    onClick={() => handleBooking('standard')}
-                    className="w-full py-2 bg-[#2D3748] text-white text-xs uppercase tracking-widest hover:opacity-90"
+                  <a
+                    href="https://buy.stripe.com/bJe7sEf67cgfcde6zHejK0g"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center w-full py-2 bg-[#2D3748] text-white text-xs uppercase tracking-widest hover:opacity-90 transition-colors"
                   >
-                    Reserve Pass
-                  </button>
+                    Reserve
+                  </a>
                 </div>
 
                 {/* Sub-Card 2 */}
                 <div className="p-4 border border-[#C05621] bg-[#C05621]/5 relative overflow-hidden">
                   <div className="flex justify-between items-baseline mb-2 relative z-10">
-                    <h4 className="font-bold text-[#C05621]">Salon Plus</h4>
+                    <h4 className="font-bold text-[#C05621]">Salon Premium</h4>
                     <span className="font-['Cormorant_Garamond'] text-xl">
                       $3,995
                     </span>
                   </div>
                   <p className="text-xs text-slate-600 mb-3 relative z-10">
-                    Everything in Salon Pass + Priority Concierge + Private
-                    Dinner
+                    Everything in Salon Standard + Premium Accommodation + VIP
+                    Dinner + Penthouse After Party
                   </p>
-                  <button
-                    onClick={() => handleBooking('prestige')}
-                    className="w-full py-2 bg-[#C05621] text-white text-xs uppercase tracking-widest hover:bg-[#A04519] relative z-10"
+                  <a
+                    href="https://buy.stripe.com/bJe7sEf67cgfcde6zHejK0g"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center w-full py-2 bg-[#C05621] text-white text-xs uppercase tracking-widest hover:bg-[#A04519] relative z-10 transition-colors"
                   >
-                    Reserve Plus
-                  </button>
+                    Reserve
+                  </a>
                 </div>
 
                 <p className="text-center text-xs text-slate-400 mt-4">
-                  Payment plans available via Stripe
+                  Packages do not include flights
                 </p>
               </div>
             </div>
@@ -914,12 +873,14 @@ const Packages: React.FC = () => {
                   Custom itinerary support
                 </li>
               </ul>
-              <button
-                onClick={() => handleBooking('invited')}
-                className="w-full py-3 bg-transparent border border-[#C05621] text-[#C05621] uppercase tracking-widest text-xs font-bold hover:bg-[#C05621] hover:text-white transition-colors"
+              <a
+                href="https://wa.me/message/WONLUWXIIA6ZJ1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-3 text-center bg-transparent border border-[#C05621] text-[#C05621] uppercase tracking-widest text-xs font-bold hover:bg-[#C05621] hover:text-white transition-colors"
               >
-                WhatsApp Concierge
-              </button>
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>
@@ -938,24 +899,34 @@ const Packages: React.FC = () => {
 const Itinerary: React.FC = () => {
   const days = [
     {
+      day: 'Day 0',
+      title: 'Arrival + Welcome Gathering',
+      desc: 'Arrivals, airport welcome, hotel check-in, and an intimate Voya welcome dinner to meet fellow guests and set the tone',
+    },
+    {
       day: 'Day 1',
-      title: 'Arrival + Welcome Salon',
-      desc: 'Arrivals, check-in, and an opening gathering to set the tone.',
+      title: 'Salons Grand Opening',
+      desc: 'Curated Souk + Market Tour, Opening conversations, evening reception, and dinner under the stars.',
     },
     {
       day: 'Day 2',
-      title: 'Salons + Cultural Immersion',
-      desc: 'Panels, writing and culture salons, curated Marrakech experience.',
+      title: 'Intimate Immersion',
+      desc: 'Panels, author conversations, writing and culture salons, and curated Marrakech experiences.',
     },
     {
       day: 'Day 3',
-      title: 'Deep Conversations',
-      desc: 'Feature sessions and an unforgettable evening performance program.',
+      title: 'Connections + Conversations',
+      desc: 'Feature sessions with thought leaders, performances, shared meals, and reflective dialogue.',
     },
     {
       day: 'Day 4',
-      title: 'Closing Gathering',
-      desc: 'Closing reflections, brunch, departures.',
+      title: 'Salon Finale',
+      desc: 'Closing reflections, final sessions, and farewell dinner.',
+    },
+    {
+      day: 'Day 5',
+      title: 'VOYA Desert Experience + Closing Celebration',
+      desc: 'A curated desert escape featuring ATVs, camel rides, wellness time, and a multi-course VOYA closing celebration beneath the night sky.',
     },
   ];
 
@@ -970,7 +941,7 @@ const Itinerary: React.FC = () => {
             Sample Itinerary
           </h2>
           <p className="text-[#C05621] font-['Proza_Libre'] tracking-widest text-sm mt-2">
-            FEB 8–11, 2026
+            FEB 7–12, 2026
           </p>
         </div>
 
@@ -1118,28 +1089,16 @@ const Footer: React.FC = () => {
 
           <div className="flex gap-4">
             <a
-              href="#"
+              href="https://www.instagram.com/thediasporasalon"
               className="w-10 h-10 bg-[#C05621] flex items-center justify-center rounded-full hover:bg-white hover:text-[#C05621] transition-colors"
             >
               <Instagram size={20} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/voya-app"
               className="w-10 h-10 bg-[#C05621] flex items-center justify-center rounded-full hover:bg-white hover:text-[#C05621] transition-colors"
             >
               <Linkedin size={20} />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-[#C05621] flex items-center justify-center rounded-full hover:bg-white hover:text-[#C05621] transition-colors"
-            >
-              <Facebook size={20} />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-[#C05621] flex items-center justify-center rounded-full hover:bg-white hover:text-[#C05621] transition-colors"
-            >
-              <XLogo size={18} />
             </a>
           </div>
         </div>
@@ -1176,8 +1135,8 @@ const Footer: React.FC = () => {
             Contact
           </h4>
           <ul className="space-y-4 font-['Cormorant_Garamond'] text-lg text-slate-300">
-            <li>concierge@diasporasalon.com</li>
-            <li>+212 5 24 00 00 00</li>
+            <li>partnerships@voyaapp.co</li>
+            <li>+1-(579)-790-0165</li>
             <li className="pt-4 text-xs font-sans text-slate-500">
               © 2026 The Diaspora Salon. <br />
               All rights reserved.
@@ -1203,7 +1162,7 @@ const App: React.FC = () => {
       <NoiseOverlay />
       <Navigation />
       <Hero />
-      <Partners />
+      {/* <Partners /> */}
       <About />
       <Experience />
       <Speakers />
